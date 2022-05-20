@@ -1,11 +1,14 @@
 
 spring:
   jpa:
+    database: POSTGRESQL
     show-sql: true
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:sqlserver://mycrudserver.database.windows.net:1433;database=crudDB;user=adminlogin@mycrudserver;password=Qwer123#;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-    username: adminlogin
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
     password: Qwer123#
+    driverClassName: org.postgresql.Driver
 
